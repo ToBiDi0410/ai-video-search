@@ -1,4 +1,4 @@
-<html lang=en class="h-full w-full"><meta charset=UTF-8><meta name=viewport content="width=device-width, initial-scale=1.0"><title>AI Video Search</title><meta name=description content="Run video files through an AI model directly in your browser. No uploads needed. Search timestamps using natural language queries."><meta name=keywords content="AI video search, transformer.js, browser-based video analysis, video AI, timestamp search, no upload video processing, natural language video search"><meta name=author content=ToDi0410><link rel=stylesheet href=ai-video-search.eb34fec2.css><body class="h-full w-full">
+<html lang=en class="h-full w-full"><meta charset=UTF-8><meta name=viewport content="width=device-width, initial-scale=1.0"><title>AI Video Search</title><meta name=description content="Run video files through an AI model directly in your browser. No uploads needed. Search timestamps using natural language queries."><meta name=keywords content="AI video search, transformer.js, browser-based video analysis, video AI, timestamp search, no upload video processing, natural language video search"><meta name=author content=ToDi0410><link rel=stylesheet href=ai-video-search.3725d4bc.css><body class="h-full w-full">
     <div class="App flex flex-col gap-4 h-full p-4 w-full">
         <div class="*:bg-base-200 *:grow *:min-h-fit *:p-4 *:rounded-xl *:w-fit ROW flex flex-row flex-wrap gap-4 h-fit w-full">
             <div class=ModelBox>
@@ -22,6 +22,7 @@
             <div class="UploadBox flex flex-col">
                 <div class=text-xl>Video Upload</div>
                 <video id=VIDEO_PREVIEW class="h-[25vh] mt-4 w-full" controls></video>
+                <canvas id=QUERY_GRAPH class="bg-white h-16 relative w-full"></canvas>
                 <button id=VIDEO_UPLOAD class="btn btn-primary">Upload video</button>
                 <div class="text-center text-lime-500 text-sm w-full">You're videos are only "uploaded" to your browser and never uploaded to a server!</div>
             </div>
@@ -39,7 +40,7 @@
                 <div class="text-base-content/50 text-sm">This step generates embeddings using the AI Model that we use for the search later</div>
                 <div class=mt-4>FPS to Analyze:</div>
                 <input id=VIDEO_FPS type=number class=input required placeholder=1 value=1>
-                <div class="text-base-content/50 text-sm">This is the number of frames per second that should be extracted from the video per second</div>
+                <div class="text-base-content/50 text-sm">This is the number of frames that should be extracted from the video per second</div>
             </div>
         </div>
 
@@ -67,5 +68,5 @@
         <div class="text-error underline">Your browser does not support JavaScript!</div>
         <div>Try enabling JavaScript or updating your browser</div>
     </div>
-    <script type=module src=ai-video-search.a98af71b.js></script>
+    <script type=module src=ai-video-search.af620f61.js></script>
 
