@@ -1,4 +1,4 @@
-<html lang=en class="h-full w-full"><meta charset=UTF-8><meta name=viewport content="width=device-width, initial-scale=1.0"><title>AI Video Search</title><meta name=description content="Run video files through an AI model directly in your browser. No uploads needed. Search timestamps using natural language queries."><meta name=keywords content="AI video search, transformer.js, browser-based video analysis, video AI, timestamp search, no upload video processing, natural language video search"><meta name=author content=ToDi0410><link rel=stylesheet href=ai-video-search.d6476308.css><body class="h-full w-full">
+<html lang=en class="h-full w-full"><meta charset=UTF-8><meta name=viewport content="width=device-width, initial-scale=1.0"><title>AI Video Search</title><meta name=description content="Run video files through an AI model directly in your browser. No uploads needed. Search timestamps using natural language queries."><meta name=keywords content="AI video search, transformer.js, browser-based video analysis, video AI, timestamp search, no upload video processing, natural language video search"><meta name=author content=ToDi0410><link rel=stylesheet href=ai-video-search.b056e9bf.css><body class="h-full w-full">
     <div class="App flex flex-col gap-4 h-full p-4 w-full">
         <div class="*:bg-base-200 *:min-h-fit *:p-4 *:rounded-xl *:w-fit ROW flex flex-row flex-wrap gap-4 h-fit w-full">
             <div class="ModelBox basis-1/6 grow">
@@ -27,6 +27,10 @@
             </div>
             <div class="AnalysisBox basis-1/6 flex flex-col">
                 <div class=text-xl>Video Analysis</div>
+                <div id=NO_ACCEL role=alert class="alert alert-error alert-soft mt-4">
+                    <svg xmlns:xmlns=http://www.w3.org/2000/svg fill=none class="h-6 shrink-0 stroke-current w-6" viewBox="0 0 24 24"><path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3"/></svg>
+                    
+                </div>
                 <div class=mt-4>Extract Frames: <a id=VIDEO_EXTRACT_STATE>Waiting...</a></div>
                 <progress id=VIDEO_EXTRACT_BAR class="progress progress-secondary w-full" max=100></progress>
                 <div class="text-base-content/50 text-sm">This step extracts the raw frames from the uploaded video in order to analyze them later</div>
@@ -59,10 +63,9 @@
             </div>
         </div>
     </div>
-    <div id=SUPPORT class="absolute backdrop-blur bg-base-100/25 flex flex-col h-full items-center justify-center left-0 top-0 w-full z-50">
-        <div class=underline>Some of the features below are missing in your browser:</div>
-        <div>JavaScript Support: <a id=SUPPORT_JAVASCRIPT class=text-error>Missing</a></div>
-        <div>WebGPU Support: <a id=SUPPORT_GPU class=text-error>Missing</a></div>
+    <div id=NO_JS class="absolute backdrop-blur bg-base-100/25 flex flex-col h-full items-center justify-center left-0 top-0 w-full z-50">
+        <div class="text-error underline">Your browser does not support JavaScript!</div>
+        <div>Try enabling JavaScript or updating your browser</div>
     </div>
-    <script type=module src=ai-video-search.05a367e2.js></script>
+    <script type=module src=ai-video-search.dfda3d43.js></script>
 
