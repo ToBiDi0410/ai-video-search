@@ -1,15 +1,15 @@
-<html lang=en class="h-full w-full"><meta charset=UTF-8><meta name=viewport content="width=device-width, initial-scale=1.0"><title>AI Video Search</title><meta name=description content="Run video files through an AI model directly in your browser. No uploads needed. Search timestamps using natural language queries."><meta name=keywords content="AI video search, transformer.js, browser-based video analysis, video AI, timestamp search, no upload video processing, natural language video search"><meta name=author content=ToDi0410><link rel=stylesheet href=ai-video-search.b056e9bf.css><body class="h-full w-full">
+<html lang=en class="h-full w-full"><meta charset=UTF-8><meta name=viewport content="width=device-width, initial-scale=1.0"><title>AI Video Search</title><meta name=description content="Run video files through an AI model directly in your browser. No uploads needed. Search timestamps using natural language queries."><meta name=keywords content="AI video search, transformer.js, browser-based video analysis, video AI, timestamp search, no upload video processing, natural language video search"><meta name=author content=ToDi0410><link rel=stylesheet href=ai-video-search.636a0b91.css><body class="h-full w-full">
     <div class="App flex flex-col gap-4 h-full p-4 w-full">
         <div class="*:bg-base-200 *:min-h-fit *:p-4 *:rounded-xl *:w-fit ROW flex flex-row flex-wrap gap-4 h-fit w-full">
             <div class="ModelBox basis-1/6 grow">
                 <div class="mb-4 text-xl">AI Models</div>
                 <div role=alert class="alert alert-info">
-                    <svg xmlns:xmlns=http://www.w3.org/2000/svg fill=none class="h-6 shrink-0 stroke-current w-6" viewBox="0 0 24 24"><path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0"/></svg>
-                    
+                    <img src=material-symbols--info-rounded.82ab82cc.svg>
+                    <span><b>Model:</b> <a href=https://huggingface.co/Xenova/clip-vit-large-patch14?url class=hover:underline>Xenova/clip-vit-large-patch14</a></span>
                 </div>
                 <div role=alert class="alert alert-soft alert-warning mt-4">
-                    <svg xmlns:xmlns=http://www.w3.org/2000/svg fill=none class="h-6 shrink-0 stroke-current w-6" viewBox="0 0 24 24"><path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3"/></svg>
-                    
+                    <img src=material-symbols--warning-rounded.28c9834f.svg>
+                    <span>Models will only have to be downloaded on first run!<br><b>The initial download may take some time!</b></span>
                 </div>
                 <div class=mt-4>Vision Model: <a id=VISION_MODEL_STATE>Waiting...</a></div>
                 <progress id=VISION_MODEL_BAR class="progress progress-success w-full" max=100></progress>
@@ -28,8 +28,8 @@
             <div class="AnalysisBox basis-1/6 flex flex-col">
                 <div class=text-xl>Video Analysis</div>
                 <div id=NO_ACCEL role=alert class="alert alert-error alert-soft mt-4">
-                    <svg xmlns:xmlns=http://www.w3.org/2000/svg fill=none class="h-6 shrink-0 stroke-current w-6" viewBox="0 0 24 24"><path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3"/></svg>
-                    
+                    <img src=material-symbols--error-rounded.beed41b6.svg>
+                    <span>You're browser does not support WebGPU! <b>This will result in VERY BAD performance!</b> Try enabling these features for improved performance!</span>
                 </div>
                 <div class=mt-4>Extract Frames: <a id=VIDEO_EXTRACT_STATE>Waiting...</a></div>
                 <progress id=VIDEO_EXTRACT_BAR class="progress progress-secondary w-full" max=100></progress>
@@ -67,5 +67,5 @@
         <div class="text-error underline">Your browser does not support JavaScript!</div>
         <div>Try enabling JavaScript or updating your browser</div>
     </div>
-    <script type=module src=ai-video-search.dfda3d43.js></script>
+    <script type=module src=ai-video-search.5700cfd1.js></script>
 
