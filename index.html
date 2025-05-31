@@ -1,7 +1,7 @@
-<html lang=en class="h-full w-full"><meta charset=UTF-8><meta name=viewport content="width=device-width, initial-scale=1.0"><title>AI Video Search</title><meta name=description content="Run video files through an AI model directly in your browser. No uploads needed. Search timestamps using natural language queries."><meta name=keywords content="AI video search, transformer.js, browser-based video analysis, video AI, timestamp search, no upload video processing, natural language video search"><meta name=author content=ToDi0410><link rel=stylesheet href=ai-video-search.636a0b91.css><body class="h-full w-full">
+<html lang=en class="h-full w-full"><meta charset=UTF-8><meta name=viewport content="width=device-width, initial-scale=1.0"><title>AI Video Search</title><meta name=description content="Run video files through an AI model directly in your browser. No uploads needed. Search timestamps using natural language queries."><meta name=keywords content="AI video search, transformer.js, browser-based video analysis, video AI, timestamp search, no upload video processing, natural language video search"><meta name=author content=ToDi0410><link rel=stylesheet href=ai-video-search.eb34fec2.css><body class="h-full w-full">
     <div class="App flex flex-col gap-4 h-full p-4 w-full">
-        <div class="*:bg-base-200 *:min-h-fit *:p-4 *:rounded-xl *:w-fit ROW flex flex-row flex-wrap gap-4 h-fit w-full">
-            <div class="ModelBox basis-1/6 grow">
+        <div class="*:bg-base-200 *:grow *:min-h-fit *:p-4 *:rounded-xl *:w-fit ROW flex flex-row flex-wrap gap-4 h-fit w-full">
+            <div class=ModelBox>
                 <div class="mb-4 text-xl">AI Models</div>
                 <div role=alert class="alert alert-info">
                     <img src=material-symbols--info-rounded.82ab82cc.svg>
@@ -19,17 +19,17 @@
                 <progress id=TEXT_MODEL_BAR class="progress progress-success w-full" max=100></progress>
                 <div class="text-base-content/50 text-sm">This is the model used for generating the query embedding</div>
             </div>
-            <div class="UploadBox basis-3/6 flex flex-col">
+            <div class="UploadBox flex flex-col">
                 <div class=text-xl>Video Upload</div>
-                <video id=VIDEO_PREVIEW class="h-[50vh] mt-4 w-full" controls></video>
+                <video id=VIDEO_PREVIEW class="h-[25vh] mt-4 w-full" controls></video>
                 <button id=VIDEO_UPLOAD class="btn btn-primary">Upload video</button>
                 <div class="text-center text-lime-500 text-sm w-full">You're videos are only "uploaded" to your browser and never uploaded to a server!</div>
             </div>
-            <div class="AnalysisBox basis-1/6 flex flex-col">
+            <div class="AnalysisBox flex flex-col">
                 <div class=text-xl>Video Analysis</div>
                 <div id=NO_ACCEL role=alert class="alert alert-error alert-soft mt-4">
                     <img src=material-symbols--error-rounded.beed41b6.svg>
-                    <span>You're browser does not support WebGPU! <b>This will result in VERY BAD performance!</b> Try enabling these features for improved performance!</span>
+                    <span>You're browser does not support WebGPU!<br>This will result in VERY BAD performance!<br>Try enabling these features for improved performance!</span>
                 </div>
                 <div class=mt-4>Extract Frames: <a id=VIDEO_EXTRACT_STATE>Waiting...</a></div>
                 <progress id=VIDEO_EXTRACT_BAR class="progress progress-secondary w-full" max=100></progress>
@@ -43,8 +43,8 @@
             </div>
         </div>
 
-        <div class="*:bg-base-200 *:min-h-fit *:p-4 *:rounded-xl *:w-fit ROW flex flex-row gap-4 w-full">
-            <div class="QueryBox flex flex-col">
+        <div class="*:bg-base-200 *:grow *:min-h-fit *:p-4 *:rounded-xl *:w-fit ROW flex flex-row flex-wrap gap-4 w-full">
+            <div class="QueryBox flex flex-col max-w-96">
                 <div class=text-xl>Query</div>
                 <div class=join>
                     <input id=QUERY_INPUT placeholder="Dog playing at the beach" required>
